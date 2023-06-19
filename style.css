@@ -1,0 +1,198 @@
+:root{
+    --primary-active: #FBF8F1;
+    --primary-hover: #F9F7F2;
+    --primary-inactive: #F7F6F2;
+    --secondary-active: #EDB116;
+    --secondary-hover: #EFC24D;
+    --secondary-inactive: #F0D285;
+    --neutral-active: #2C2820;
+    --neutral-hover: #5E5B55;
+    --neutral-inactive: #908E8A;
+
+    /* margin */
+    --mg-top: 5rem;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    color: #2C2820;
+    font-weight: 400;
+}
+img{
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem 5rem;
+    box-shadow: 0 0 3px var(--neutral-inactive);
+}
+.logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.avatar-img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+input{
+    color: var(--neutral-hover);
+    max-width: 20rem;
+    outline: none;
+}
+/* input:focus-within{
+    border: 1px solid red;
+} */
+button{
+    text-transform: uppercase;
+    transition: .5s;
+    cursor: pointer;
+}
+.search{
+    background-color: var(--neutral-active);
+    color: var(--primary-active);
+    box-shadow: 0 3px 10px var(--neutral-inactive);
+    border: none;
+    margin-inline-start: 10px;
+}
+.search:hover{
+    background-color: var(--neutral-hover);
+}
+input[type="search"]{
+    border: 1px solid var(--neutral-inactive);
+}
+input:focus{
+    border: 1px solid var(--secondary-active);
+}
+input[type="search"],
+button
+{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+
+
+
+/* main page displaying movies css */
+#video{
+    margin-top: var(--mg-top);
+    padding: .5rem 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.card{
+    max-width: 20rem;
+    height: 23rem;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 5px var(--neutral-active);
+}
+.card-img{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.card-desc{
+    position: absolute;
+    bottom: 0;
+    border-radius: 14px;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--primary-inactive);
+    border: 1px solid var(--primary-inactive);
+}
+.flex-card-desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.2rem;
+}
+.play-icon{
+    width: 2rem;
+    height: 2rem;
+}
+.left-info{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.title-rls{
+    display: flex;
+    flex-direction: column;
+}
+.mv-title{
+    color: var(--neutral-active);
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 1rem;
+    max-width: 12rem;
+}
+.release{
+    padding: 5px;
+    max-width: 8rem;
+}
+.view{
+    border: 0;
+    background-color: var(--secondary-active);
+    padding: 10px 1rem;
+    font-size: 10px;
+}
+.view:hover{
+    background-color: var(--primary-hover);
+    border: 1px solid var(--secondary-hover);
+    color: #000;
+}
+/* main page displaying movies css End*/
+
+
+/* Pagintion */
+a{
+    text-decoration: none;
+    color: var(--primary-active);
+}
+a:hover{
+    text-decoration: underline;
+    color: var(--neutral-active);
+}
+
+/******************************** Media query************************/
+@media (max-width: 55rem){
+    .navigation{
+        padding: .5rem;
+    }
+    #video{
+        padding: 10px;
+    }
+}
+@media (max-width: 35rem){
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .search{
+        padding: 10px 15px;
+        width: 6rem;
+    }
+}
